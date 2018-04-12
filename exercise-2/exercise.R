@@ -8,7 +8,7 @@
 library(fueleconomy)
 
 # Install and load the "dplyr" library
-install.packages('dplyr')
+install.packages("dplyr")
 
 # Select the different manufacturers (makes) of the cars in this data set. 
 # Save this vector in a variable
@@ -44,7 +44,7 @@ worst_id <- select(filter(cars_filtered, hwy == min(hwy)), id)
 # You'll need to filter more (and do some selecting)!
 choice <- function(year_choice, make_choice) {
   select(filter(filter(filter(vehicles, year == year_choice),
-                       make == make_choice),hwy == max(hwy)), model)
+                       make == make_choice), hwy == max(hwy)), model)
 }
 
 # What was the most efficient Honda model of 1995?
